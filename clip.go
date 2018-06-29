@@ -9,15 +9,15 @@ import (
 )
 
 func clip() {
-	bucket := "qtest"
-	key := "1.mp4"
-	accessKey := "GawJMpe4q9sfYkklO038v-K4YtknqUyLtyfO2-1y"
-	secretKey := "Nhj9otR2jIrF0gZIvorzshNhbkN60DvNBp8CjUD3"
+	bucket := "your-bucket"
+	key := "your-key"
+	accessKey := "Your-accessKey"
+	secretKey := "Your-secrectKey"
 	mac := qbox.NewMac(accessKey, secretKey)
 	cfg := storage.Config{
 		UseHTTPS: false,
 	}
-	saveBucket := "qtest-private"
+	saveBucket := "purpose-bucket"
 
 	// 处理指令集合
 	fopAvthumb := fmt.Sprintf("avthumb/mp4/ss/60/t/60|saveas/%s",
